@@ -1,0 +1,7 @@
+requests
+python-telegram-bot==20.1
+python-dotenv
+httpx
+datetime
+pytz
+beautifulsoup4
