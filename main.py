@@ -12,12 +12,7 @@ url = "https://www.peopleperhour.com/freelance-jobs/technology-programming"
 
 bot = Bot(token=TOKEN)
 
-
-with open('store.txt', 'r') as file:
-    try:
-        flag = int(file.read())
-    except:
-        flag = 0
+flag = 0
 
 
 async def fetchData():
@@ -63,9 +58,6 @@ async def fetchData():
             await bot.send_message(chat_id=CHATID, text=text, parse_mode="MARKDOWN")
             
             flag = int(link.split('-')[-1])
-            
-            with open('store.txt', 'w') as file:
-                file.write(f'{flag}')
     except Exception as e:
         print(f"An error occurred: {e}")
 
